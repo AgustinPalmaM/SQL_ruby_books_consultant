@@ -9,7 +9,7 @@ module FillDatabase
     DB.exec("SELECT * FROM #{column} WHERE #{keys.first} = #{values.first}").first
   end
 
-  def fill
+  def fill_db
     CSV.foreach("books.csv", headers: true) do |row|
       row.fields.map { |item| item.gsub!("'", "''") }
 

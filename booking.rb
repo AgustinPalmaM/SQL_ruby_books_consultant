@@ -3,7 +3,7 @@ require_relative 'fill_database'
 class Booking
   include FillDatabase
   def initialize
-    fill
+    fill_db
   end
 end
 
