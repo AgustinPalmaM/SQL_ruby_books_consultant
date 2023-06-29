@@ -1,3 +1,5 @@
+require "terminal-table"
+
 def welcome_message
   puts "#" * 70
   puts "#{'#' * 10}#{' ' * 14}Welcome to Booking APP#{' ' * 14}#{'#' * 10}"
@@ -19,6 +21,12 @@ def goodbye_message
   puts "#" * 70
 end
 
-welcome_message
-options_menu
-goodbye_message
+def create_table(title, headings, rows)
+  table = Terminal::Table.new
+  table.title = title
+  table.headings = headings
+  table.rows = rows
+  puts table
+end
+
+
