@@ -1,25 +1,25 @@
 CREATE TABLE authors(
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR NOT NULL,
+  name VARCHAR NOT NULL UNIQUE,
   nationality VARCHAR NOT NULL,
   birthdate DATE NOT NULL
 );
 
 CREATE TABLE publishers(
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR NOT NULL,
+  name VARCHAR NOT NULL UNIQUE,
   annual_revenue INT NOT NULL,
   founded_year INT NOT NULL
 );
 
 CREATE TABLE genres(
   id SERIAL PRIMARY KEY NOT NULL,
-  genre VARCHAR NOT NULL
+  genre VARCHAR NOT NULL UNIQUE
 );
 
 CREATE TABLE books(
   id SERIAL PRIMARY KEY NOT NULL,
-  title VARCHAR NOT NULL,
+  title VARCHAR NOT NULL UNIQUE,
   pages INT NOT NULL,
   author_id INT REFERENCES authors(id) NOT NULL,
   publisher_id INT REFERENCES publishers(id) NOT NULL

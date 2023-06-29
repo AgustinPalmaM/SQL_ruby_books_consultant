@@ -3,4 +3,4 @@
 dropdb booking
 createdb booking
 psql -d booking < create.sql
-psql -d booking
+# psql -d booking

@@ -1,7 +1,7 @@
 require "pg"
 
 module Connection
-  def initialize
-    @db = PG.connect(dbname: "booking")
+  def self.connect_db
+    PG.connect(dbname: "booking")
   end
 end
