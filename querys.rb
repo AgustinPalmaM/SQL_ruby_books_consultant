@@ -1,27 +1,28 @@
 require_relative "connection"
 require_relative "helpers"
 
-DB = PG.connect(dbname: "booking")
+module Querys
+  DB = PG.connect(dbname: "booking")
 
-def top_five_publishers
-  result = DB.exec("SELECT * FROM publishers ORDER BY annual_revenue DESC LIMIT 5;")
-  create_table("Top 5 Publishers", result.fields, result.values)
-end
+  def top_five_publishers
+    result = DB.exec("SELECT * FROM publishers ORDER BY annual_revenue DESC LIMIT 5;")
+    create_table("Top 5 Publishers", result.fields, result.values)
+  end
 
-def search_books(data)
-  key_search = data.keys.join == "title" ? "book.title" : "#{data.keys.join}.name"
+  def search_books(data)
+    key_search = data.keys.join == "title" ? "book.title" : "#{data.keys.join}.name"
 
-  result = DB.exec("SELECT book.id, book.title, book.pages, author.name, publisher.name
+    result = DB.exec("SELECT book.id, book.title, book.pages, author.name, publisher.name
                     FROM books AS book
                     INNER JOIN authors AS author ON book.author_id = author.id
                     INNER JOIN publishers AS publisher ON book.publisher_id = publisher.id
                     WHERE LOWER(#{key_search}) LIKE '%#{data.values.join.downcase}%'")
-  create_table("Search Book", result.fields, result.values)
-end
+    create_table("Search Book", result.fields, result.values)
+  end
 
-def count_books(data)
-  key_search = data == "genre" ? "genre.genre" : "#{data}.name"
-  result = DB.exec("SELECT #{key_search}, COUNT(DISTINCT(book.title)) AS count
+  def count_books(data)
+    key_search = data == "genre" ? "genre.genre" : "#{data}.name"
+    result = DB.exec("SELECT #{key_search}, COUNT(DISTINCT(book.title)) AS count
                      FROM books AS book
                      INNER JOIN authors AS author ON book.author_id = author.id
                      INNER JOIN publishers AS publisher ON book.publisher_id = publisher.id
@@ -30,7 +31,6 @@ def count_books(data)
                      GROUP BY #{key_search}
                      ORDER BY count DESC;")
 
-  create_table("Count Books", result.fields, result.values)
+    create_table("Count Books", result.fields, result.values)
+  end
 end
-
-count_books('publisher')
