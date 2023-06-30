@@ -8,9 +8,14 @@
     This is a CLI App that let you to know more about a list of books with data lije authors, publishers, genres, using postgreSQL and ruby we can manage this app tho show relevant information to the user, as top fiove publishers, search by title, author or publisher and count of books using filters lije author, publisher or genres
     <br />
     <a href="https://github.com/AgustinPalmaM/SQL_ruby_books_consultant.git"><strong>Explore the docs »</strong></a>
-    <br />
   </p>
 </div>
+
+### Built With
+
+* [![Ruby][Ruby]][Ruby-url]
+
+
 
 # Workshop: SQL Booking
 
@@ -204,3 +209,6 @@ Option 3 (the option could be author, publisher, genre)
 +---------------------+-------------+
 >
 ```
+
+[Ruby]: https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white%22
+[Ruby-url]: https://www.ruby-lang.org/en/ 
