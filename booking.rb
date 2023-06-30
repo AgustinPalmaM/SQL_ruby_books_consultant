@@ -13,13 +13,14 @@ class Booking
   end
 
   def start
+    puts "\e[H\e[2J"
     welcome_message
-
+    sleep(2)
     puts "\e[H\e[2J"
     options_menu
     input = nil
     while input != "exit"
-      print "> "
+      print "> ".yellow
       input, option = gets.chomp.split
       case input
       when "1"
@@ -38,8 +39,10 @@ class Booking
       when "menu"
         puts "\e[H\e[2J"
         options_menu
-      when "quit" then goodbye_message
-                       break
+      when "quit"
+        puts "\e[H\e[2J"
+        goodbye_message
+        break
       else
         puts "invalid option"
       end
