@@ -1,3 +1,17 @@
+<a name="readme-top"></a>
+
+<br />
+<div align="center">
+  <h3 align="center">SQL Ruby book consultant</h3>
+
+  <p align="center">
+    This is a CLI App that let you to know more about a list of books with data lije authors, publishers, genres, using postgreSQL and ruby we can manage this app tho show relevant information to the user, as top fiove publishers, search by title, author or publisher and count of books using filters lije author, publisher or genres
+    <br />
+    <a href="https://github.com/AgustinPalmaM/SQL_ruby_books_consultant.git"><strong>Explore the docs »</strong></a>
+    <br />
+  </p>
+</div>
+
 # Workshop: SQL Booking
 
 ## Tasks
