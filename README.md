@@ -16,7 +16,21 @@
 * [![Ruby][Ruby]][Ruby-url]
 * [![Postgres][Postgres]][Postgres-url]
 
+## To use this project locally
 
+You need to have installed Ruby and PostgreSQL, you can check more information here: [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/) and here: [https://www.postgresql.org/](https://www.postgresql.org/)
+
+
+Then you can clone this repository and add necesary gems into the Gemfile using bundler
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/AgustinPalmaM/SQL_ruby_books_consultant.git
+   ```
+2. Install Gems
+   ```sh
+   bundle install
+   ```
 
 # Workshop: SQL Booking
 
