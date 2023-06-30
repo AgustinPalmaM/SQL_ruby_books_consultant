@@ -14,6 +14,7 @@
 ### Built With
 
 * [![Ruby][Ruby]][Ruby-url]
+* [![Postgres][Postgres]][Postgres-url]
 
 
 
@@ -212,3 +213,5 @@ Option 3 (the option could be author, publisher, genre)
 
 [Ruby]: https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white%22
 [Ruby-url]: https://www.ruby-lang.org/en/ 
+[Postgres]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[Postgres-url]: https://www.postgresql.org/
