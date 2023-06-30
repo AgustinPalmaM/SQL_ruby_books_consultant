@@ -13,7 +13,6 @@ module Helpers
     puts "2. Search books by [title=string | author=string | publisher=string]"
     puts "3. Count books by [author | publisher | genre]"
     puts "---"
-    print "> "
   end
 
   def goodbye_message
