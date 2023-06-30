@@ -220,6 +220,25 @@ Option 3 (the option could be author, publisher, genre)
 +---------------------+-------------+
 >
 ```
+### Some optionals
+
+Add a welcome_message method
+
+```bash
+######################################################################
+##########          Welcome to book consultant app          ##########
+######################################################################
+```
+
+Add a goodbye_message method
+
+```bash
+######################################################################
+##########           Thanks for using Booking APP           ##########
+######################################################################
+```
+Add color to outputs into the terminal
+
 
 [Ruby]: https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white%22
 [Ruby-url]: https://www.ruby-lang.org/en/ 

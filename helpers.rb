@@ -3,7 +3,7 @@ require "colorize"
 module Helpers
   def welcome_message
     puts "#".yellow * 70
-    puts "#{'#'.yellow * 10}#{' ' * 14}#{'Welcome to Booking APP'.blue}#{' ' * 14}#{'#'.yellow * 10}"
+    puts "#{'#'.yellow * 10}#{' ' * 10}#{'Welcome to book consultant app'.blue}#{' ' * 10}#{'#'.yellow * 10}"
     puts "#".yellow * 70
   end
 
