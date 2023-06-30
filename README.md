@@ -32,9 +32,7 @@ Then you can clone this repository and add necesary gems into the Gemfile using 
    bundle install
    ```
 
-# Workshop: SQL Booking
-
-## Tasks
+## Tasks for this project:
 
 ### Create an Entity Relationship Diagram (ERD)
 
@@ -60,11 +58,9 @@ $
 
 ### Populate the tables
 
-Create a program `insert_data.rb` that should take one command-line argument
-`csv_file_path`. The program should read the CSV file and create all the records
-on the database.
+Create a program `fill_database.rb`. The program should read the CSV file and create all the records on the database.
 
-### Booking app
+### Book Consultant app
 
 The booking app displays a Menu with some options to interact with the database:
 
