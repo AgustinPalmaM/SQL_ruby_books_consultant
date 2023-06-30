@@ -31,7 +31,13 @@ Then you can clone this repository and add necesary gems into the Gemfile using 
    ```sh
    bundle install
    ```
+These are the gems used for this project:
 
+* "pg" to manage connection between ruby and potgresql
+* "rubocop" to keep best practices into the ruby code
+* "terminal-table" to organize data and show as a nice table 
+* "csv" to get data from the csv file and can create the database filling with the csv file data
+* "colorize" to add color to the instructions and the data into the tables displayed into the terminal
 ## Tasks for this project:
 
 ### Create an Entity Relationship Diagram (ERD)
